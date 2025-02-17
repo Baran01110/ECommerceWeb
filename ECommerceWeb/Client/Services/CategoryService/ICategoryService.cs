@@ -9,6 +9,6 @@ namespace ECommerceWeb.Client.Services.CategoryService
     interface ICategoryService
     {
         public List<Category> Categories { get; set; }
-        void LoadCategories();
+        Task LoadCategories();
     }
 }
