@@ -1,4 +1,5 @@
-﻿using ECommerceWeb.Shared;
+﻿using ECommerceWeb.Server.Services.CategoryService;
+using ECommerceWeb.Shared;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,17 +13,18 @@ namespace ECommerceWeb.Server.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
+        private readonly ICategoryService _categoryService;
+
+        public CategoryController(ICategoryService categoryService)
+        {
+            _categoryService = categoryService;
+        }
+
         [HttpGet]
 
         public async Task< ActionResult<List<Category>>> GetCategories()
         {
-            return Ok(new List<Category>
-            {
-                new Category {Id=1, Name = "Books" , Url = "books", Icon = "book"},
-                new Category {Id=2, Name = "Phones" , Url = "phones", Icon = "phone"},
-                new Category {Id=3, Name = "Toys" , Url = "toys", Icon = "puzzle-piece"}
-
-            });
+            return Ok(await _categoryService.GetCategories());
         }
     }
 }
