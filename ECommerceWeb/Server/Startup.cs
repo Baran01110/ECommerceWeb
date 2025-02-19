@@ -1,4 +1,5 @@
 using ECommerceWeb.Server.Services.CategoryService;
+using ECommerceWeb.Server.Services.ProductService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,7 @@ namespace ECommerceWeb.Server
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductService, ProductService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
