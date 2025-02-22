@@ -4,14 +4,16 @@ using ECommerceWeb.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ECommerceWeb.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250222114320_Seeding")]
+    partial class Seeding
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -111,7 +113,7 @@ namespace ECommerceWeb.Server.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            DateCreated = new DateTime(2025, 2, 22, 14, 58, 41, 121, DateTimeKind.Local).AddTicks(1396),
+                            DateCreated = new DateTime(2025, 2, 22, 14, 43, 20, 91, DateTimeKind.Local).AddTicks(655),
                             DateUpdated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Iphone is the most iconic phone ever. If you have this phone you look rich :)",
                             Image = "https://e7.pngegg.com/pngimages/599/150/png-clipart-iphone-x-front-view-apple%E6%89%8B%E6%9C%BA-iphone-thumbnail.png",
@@ -125,7 +127,7 @@ namespace ECommerceWeb.Server.Migrations
                         {
                             Id = 2,
                             CategoryId = 3,
-                            DateCreated = new DateTime(2025, 2, 22, 14, 58, 41, 122, DateTimeKind.Local).AddTicks(2583),
+                            DateCreated = new DateTime(2025, 2, 22, 14, 43, 20, 92, DateTimeKind.Local).AddTicks(8426),
                             DateUpdated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Gun and guns Half-Life is most iconic game ever",
                             Image = "https://upload.wikimedia.org/wikipedia/en/2/25/Half-Life_2_cover.jpg",
@@ -139,7 +141,7 @@ namespace ECommerceWeb.Server.Migrations
                         {
                             Id = 3,
                             CategoryId = 2,
-                            DateCreated = new DateTime(2025, 2, 22, 14, 58, 41, 122, DateTimeKind.Local).AddTicks(2670),
+                            DateCreated = new DateTime(2025, 2, 22, 14, 43, 20, 92, DateTimeKind.Local).AddTicks(8442),
                             DateUpdated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Gun and guns Half-Life is most iconic game ever",
                             Image = "https://upload.wikimedia.org/wikipedia/en/2/25/Half-Life_2_cover.jpg",
