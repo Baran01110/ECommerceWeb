@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ECommerceWeb.Client.Services.ProductService
 {
-    interface IProductService
+   public interface IProductService
     {
         event Action OnChange;
 
